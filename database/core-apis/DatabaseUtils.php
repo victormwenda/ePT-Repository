@@ -49,6 +49,8 @@ class DatabaseUtils {
 	}
 	public function __construct($host = "localhost", $user = "eptadmin", $password = "rGQHv]LF*H6(", $database = "eptnew") {
 
+		require_once 'DatabaseConnection.php';
+
 		$database_connection = new DatabaseConnection ( $host, $user, $password, $database );
 		
 		$this->database_handle = $database_connection->open_database_connection ();
